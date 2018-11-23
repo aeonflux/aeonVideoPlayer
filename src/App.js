@@ -71,9 +71,7 @@ class App extends Component {
           loop
         >
           <View style={styles.slide}>
-            <Text style={{ color: "#ffffff", fontSize: 25, left: 20 }}>
-              Youtube
-            </Text>
+            <Text style={styles.label}>Youtube</Text>
             <View style={styles.videoContainer}>
               <WebView
                 style={styles.WebViewContainer}
@@ -84,9 +82,10 @@ class App extends Component {
                 }}
               />
             </View>
-            <Text styles={styles.swipeLabel}>Swipe right to see more</Text>
+            <Text style={styles.swipeLabel}>Swipe right to see more</Text>
           </View>
           <View style={styles.slide}>
+            <Text style={styles.label}>Twitch</Text>
             <View style={styles.videoContainer}>
               <WebView
                 style={styles.WebViewContainer}
@@ -97,8 +96,10 @@ class App extends Component {
                 }}
               />
             </View>
+            <Text style={styles.swipeLabel}>Swipe right to see more</Text>
           </View>
           <View style={styles.slide}>
+            <Text style={styles.label}>Vimeo</Text>
             <View style={styles.videoContainer}>
               <WebView
                 style={styles.WebViewContainer}
@@ -109,8 +110,10 @@ class App extends Component {
                 }}
               />
             </View>
+            <Text style={styles.swipeLabel}>Swipe right to see more</Text>
           </View>
           <View style={styles.slide}>
+            <Text style={styles.label}>DailyMotion</Text>
             <View style={styles.videoContainer}>
               <WebView
                 style={styles.WebViewContainer}
@@ -121,6 +124,7 @@ class App extends Component {
                 }}
               />
             </View>
+            <Text style={styles.swipeLabel}> At the end of the videos</Text>
           </View>
         </Swiper>
       </View>
@@ -133,7 +137,12 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: "#151515"
   },
-  swipe: {
+  label: {
+    color: "#ffffff",
+    fontSize: 25,
+    left: 20
+  },
+  swipeLabel: {
     color: "#ffffff",
     fontSize: 15,
     left: 20
@@ -169,12 +178,12 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     alignItems: "center",
     backgroundColor: "#92BBD9"
-  },
-  text: {
-    color: "#fff",
-    fontSize: 30,
-    fontWeight: "bold"
   }
+  // text: {
+  //   color: "#fff",
+  //   fontSize: 30,
+  //   fontWeight: "bold"
+  // }
 });
 
 export default App;
